@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c0392b">
+  <title>Fudoshin Aanwezigheden</title>
+  <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Scherm 1: Kies beheerder -->
+  <div id="schermBeheerder" class="scherm actief">
+    <h1>🥋 Fudoshin Team</h1>
+    <h2>Aanwezigheden</h2>
+    <select id="keuzesBeheerder">
+      <option value="">Kies beheerder...</option>
+      <option value="Paul">Paul</option>
+      <option value="Brent">Brent</option>
+      <option value="Chiara">Chiara</option>
+    </select>
+    <button id="btnStart" onclick="startSessie()">Start sessie</button>
+  </div>
+
+  <!-- Scherm 2: Kies training -->
+  <div id="schermTraining" class="scherm">
+    <h2>Type training</h2>
+    <p id="labelBeheerder"></p>
+    <select id="keuzesTraining">
+      <option value="">Kies type training...</option>
+      <option value="Gewone training">Gewone training</option>
+      <option value="Kadertraining">Kadertraining</option>
+      <option value="Stage">Stage</option>
+      <option value="Kumite stage">Kumite stage</option>
+      <option value="Elite training">Elite training</option>
+      <option value="Wedstrijd">Wedstrijd</option>
+    </select>
+    <button onclick="startScan()">Start scan</button>
+  </div>
+
+  <!-- Scherm 3: Scanresultaat -->
+  <div id="schermResultaat" class="scherm">
+    <h2 id="resultaatTitel">Resultaat</h2>
+    <p id="resultaatNaam"></p>
+    <p id="resultaatStatus"></p>
+    <button onclick="nieuweScan()">Volgende scan</button>
+    <button onclick="stopSessie()">Stop sessie</button>
+  </div>
+
+<script src="./app.js"></script>
+</body>
+</html>
